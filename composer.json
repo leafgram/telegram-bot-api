@@ -1,0 +1,40 @@
+{
+    "name": "leafgram/telegram-bot-api",
+    "description": "A lightweight PHP MVC framework for rapid API development.",
+    "type": "library",
+    "keywords": [
+        "framework",
+        "leaf",
+        "leafgram",
+        "leafPHP",
+        "mvc",
+        "leaf api",
+        "api",
+        "telegram",
+        "bot"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Javlonbek Tuychiyev",
+            "email": "president7566@gmail.com",
+            "homepage": "https://github.com/president-tuychiyev",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leafgram\\Telegram\\": "app/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": false,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
