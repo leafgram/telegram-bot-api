@@ -24,7 +24,7 @@
  * 
  */
 
-namespace Sysgram\Telegram\Extra;
+namespace Leafgram\TelegramBotApi\Extra;
 
 class ChatAction
 {

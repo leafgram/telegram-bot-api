@@ -24,13 +24,13 @@
  * 
  */
 
-namespace App\Telegram;
+namespace Leafgram\TelegramBotApi;
 
 error_reporting(E_ALL ^ E_DEPRECATED);
 
-use App\Telegram\Api\AvailableMethods;
-use App\Telegram\Api\InlineMode;
-use App\Telegram\Api\UpdatingMessages;
+use Leafgram\TelegramBotApi\Api\AvailableMethods;
+use Leafgram\TelegramBotApi\Api\InlineMode;
+use Leafgram\TelegramBotApi\Api\UpdatingMessages;
 
 class Bot
 {
