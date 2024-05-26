@@ -10,6 +10,15 @@ class Request
         return request()->get('message') ?? null;
     }
 
+    public static function getId()
+    {
+        if (isset(request()->get('inline_query')['from'])) {
+            return request()->get('inline_query')['from']['id'];
+        }
+        
+        if (isset(request()->get('message')['']))
+    }
+
     public static function getMessageId()
     {
         return request()->get('message')['message_id'] ?? null;
@@ -168,5 +177,29 @@ class Request
     public static function getLocation()
     {
         return request()->get('message')['location'] ?? null;
+    }
+
+
+
+
+
+    public static function getInlineQuery()
+    {
+        return request()->get('inline_query') ?? null;
+    }
+
+    public static function getFromId()
+    {
+        return request()->get('inline_query')['from']['id'] ?? null;
+    }
+
+    public static function getInlineQueryId()
+    {
+        return request()->get('inline_query')['id'] ?? null;
+    }
+
+    public static function getQuery()
+    {
+        return request()->get('inline_query')['query'] ?? null;
     }
 }
