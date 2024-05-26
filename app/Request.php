@@ -194,21 +194,21 @@ class Request
 
     public static function getInlineQueryFrom()
     {
-        return self::update()->inline_query?->from ?? null;
+        return self::getInlineQuery()?->from ?? null;
     }
 
     public static function getInlineQueryFromId()
     {
-        return request()->get('inline_query')['from']['id'] ?? null;
+        return self::getInlineQueryFrom()?->id ?? null;
     }
 
     public static function getInlineQueryId()
     {
-        return request()->get('inline_query')['id'] ?? null;
+        return self::getInlineQuery()?->id ?? null;
     }
 
     public static function getQuery()
     {
-        return request()->get('inline_query')['query'] ?? null;
+        return self::getInlineQuery()?->query ?? null;
     }
 }
