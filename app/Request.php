@@ -188,7 +188,12 @@ class Request
         return request()->get('inline_query') ?? null;
     }
 
-    public static function getFromId()
+    public static function getInlineQueryFrom()
+    {
+        return request()->get('inline_query')['from'] ?? null;
+    }
+
+    public static function getInlineQueryFromId()
     {
         return request()->get('inline_query')['from']['id'] ?? null;
     }
