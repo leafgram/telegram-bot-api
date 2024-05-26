@@ -5,6 +5,12 @@ namespace Leafgram\TelegramBotApi;
 class Request
 {
 
+    public function update()
+    {
+        is_null(json_decode(file_get_contents('php://input'))) ? $data = $_REQUEST : $data = json_decode(file_get_contents('php://input'));
+        return $data;
+    }
+
     public static function getMessage()
     {
         return request()->get('message') ?? null;
@@ -185,12 +191,12 @@ class Request
 
     public static function getInlineQuery()
     {
-        return request()->get('inline_query') ?? null;
+        return $this->update?->inline_query ?? null;
     }
 
     public static function getInlineQueryFrom()
     {
-        return request()->get('inline_query')['from'] ?? null;
+        return $this->update?->inline_query?->from ?? null;
     }
 
     public static function getInlineQueryFromId()
