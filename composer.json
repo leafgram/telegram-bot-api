@@ -28,7 +28,10 @@
     "autoload": {
         "psr-4": {
             "Leafgram\\TelegramBotApi\\": "app/"
-        }
+        },
+        "files": [
+            "app/helpers.php"
+        ]
     },
     "config": {
         "optimize-autoloader": true,
