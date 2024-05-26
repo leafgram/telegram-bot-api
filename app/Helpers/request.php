@@ -1,6 +1,6 @@
 <?php
 
-function request()
+function requestBot()
 {
     is_null(json_decode(file_get_contents('php://input'))) ? $data = $_REQUEST : $data = json_decode(file_get_contents('php://input'));
 
