@@ -105,4 +105,68 @@ class Request
     {
         return request()->get('message')['sender_chat']['type'] ?? null;
     }
+
+
+
+
+
+    public static function getText()
+    {
+        return request()->get('message')['text'] ?? null;
+    }
+
+    public static function getAnimation()
+    {
+        return request()->get('message')['animation'] ?? null;
+    }
+
+    public static function getAudio()
+    {
+        return request()->get('message')['audio'] ?? null;
+    }
+
+    public static function getDocument()
+    {
+        return request()->get('message')['document'] ?? null;
+    }
+
+    public static function getPhoto()
+    {
+        return request()->get('message')['photo'] ?? null;
+    }
+
+    public static function getVideo()
+    {
+        return request()->get('message')['video'] ?? null;
+    }
+
+    public static function getVideoNote()
+    {
+        return request()->get('message')['video_note'] ?? null;
+    }
+
+    public static function getSticker()
+    {
+        return request()->get('message')['sticker'] ?? null;
+    }
+
+    public static function getVoice()
+    {
+        return request()->get('message')['voice'] ?? null;
+    }
+
+    public static function getCaption()
+    {
+        return request()->get('message')['caption'] ?? null;
+    }
+
+    public static function getContact()
+    {
+        return request()->get('message')['contact'] ?? null;
+    }
+
+    public static function getLocation()
+    {
+        return request()->get('message')['location'] ?? null;
+    }
 }
