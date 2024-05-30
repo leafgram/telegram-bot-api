@@ -13,51 +13,47 @@ class Request
 
     public static function getMessage()
     {
-        return request()->get('message') ?? null;
-    }
-
-    public static function getId()
-    {
-        if (isset(request()->get('inline_query')['from'])) {
-            return request()->get('inline_query')['from']['id'];
-        }
+        return self::update()?->message ?? null;
     }
 
     public static function getMessageId()
     {
-        return request()->get('message')['message_id'] ?? null;
+        return self::getMessage()->message_id ?? null;
     }
-
-
 
     public static function getChat()
     {
-        return request()->get('message')['chat'] ?? null;
+        return self::getMessage()->chat ?? null;
     }
 
     public static function getChatId()
     {
-        return request()->get('message')['chat']['id'] ?? null;
+        return self::getChat()->id ?? null;
     }
 
     public static function getChatFirstname()
     {
-        return request()->get('message')['chat']['first_name'] ?? null;
+        return self::getChat()->first_name ?? null;
+    }
+
+    public static function getChatLastname()
+    {
+        return self::getChat()->last_name ?? null;
     }
 
     public static function getChatUsername()
     {
-        return request()->get('message')['chat']['username'] ?? null;
+        return self::getChat()->username ?? null;
     }
 
     public static function getChatTitle()
     {
-        return request()->get('message')['chat']['title'] ?? null;
+        return self::getChat()->title ?? null;
     }
 
     public static function getChatType()
     {
-        return request()->get('message')['chat']['type'] ?? null;
+        return self::getChat()->type ?? null;
     }
 
 
@@ -67,27 +63,27 @@ class Request
 
     public static function getFrom()
     {
-        return request()->get('message')['from'] ?? null;
+        return self::getMessage()->from ?? null;
     }
 
     public static function getFromId()
     {
-        return request()->get('message')['from']['id'] ?? null;
+        return self::getFrom()->id ?? null;
     }
 
     public static function getFromFirstname()
     {
-        return request()->get('message')['from']['first_name'] ?? null;
+        return self::getFrom()->first_name ?? null;
     }
 
     public static function getFromLastname()
     {
-        return request()->get('message')['from']['last_name'] ?? null;
+        return self::getFrom()->last_name ?? null;
     }
 
     public static function getFromUsername()
     {
-        return request()->get('message')['from']['username'] ?? null;
+        return self::getFrom()->username ?? null;
     }
 
 
@@ -96,27 +92,27 @@ class Request
 
     public static function getSenderChat()
     {
-        return request()->get('message')['sender_chat'] ?? null;
+        return self::getMessage()->sender_chat ?? null;
     }
 
     public static function getSenderChatId()
     {
-        return request()->get('message')['sender_chat']['id'] ?? null;
+        return self::getSenderChat()->id ?? null;
     }
 
     public static function getSenderChatTitle()
     {
-        return request()->get('message')['sender_chat']['title'] ?? null;
+        return self::getSenderChat()->title ?? null;
     }
 
     public static function getSenderChatUsername()
     {
-        return request()->get('message')['sender_chat']['username'] ?? null;
+        return self::getSenderChat()->username ?? null;
     }
 
     public static function getSenderChatType()
     {
-        return request()->get('message')['sender_chat']['type'] ?? null;
+        return self::getSenderChat()->type ?? null;
     }
 
 
@@ -125,62 +121,62 @@ class Request
 
     public static function getText()
     {
-        return request()->get('message')['text'] ?? null;
+        return self::getMessage()->text ?? null;
     }
 
     public static function getAnimation()
     {
-        return request()->get('message')['animation'] ?? null;
+        return self::getMessage()->animation ?? null;
     }
 
     public static function getAudio()
     {
-        return request()->get('message')['audio'] ?? null;
+        return self::getMessage()->audio ?? null;
     }
 
     public static function getDocument()
     {
-        return request()->get('message')['document'] ?? null;
+        return self::getMessage()->document ?? null;
     }
 
     public static function getPhoto()
     {
-        return request()->get('message')['photo'] ?? null;
+        return self::getMessage()->photo ?? null;
     }
 
     public static function getVideo()
     {
-        return request()->get('message')['video'] ?? null;
+        return self::getMessage()->video ?? null;
     }
 
     public static function getVideoNote()
     {
-        return request()->get('message')['video_note'] ?? null;
+        return self::getMessage()->video_note ?? null;
     }
 
     public static function getSticker()
     {
-        return request()->get('message')['sticker'] ?? null;
+        return self::getMessage()->sticker ?? null;
     }
 
     public static function getVoice()
     {
-        return request()->get('message')['voice'] ?? null;
+        return self::getMessage()->voice ?? null;
     }
 
     public static function getCaption()
     {
-        return request()->get('message')['caption'] ?? null;
+        return self::getMessage()->caption ?? null;
     }
 
     public static function getContact()
     {
-        return request()->get('message')['contact'] ?? null;
+        return self::getMessage()->contact ?? null;
     }
 
     public static function getLocation()
     {
-        return request()->get('message')['location'] ?? null;
+        return self::getMessage()->location ?? null;
     }
 
 
