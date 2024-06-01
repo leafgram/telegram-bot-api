@@ -23,7 +23,7 @@
  *
  */
 
-namespace App\Telegram\Api;
+namespace Leafgram\TelegramBotApi\Api;
 
 trait UpdatingMessages
 {

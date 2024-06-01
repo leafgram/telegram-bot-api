@@ -24,7 +24,7 @@
  * 
  */
 
-namespace Sysgram\Telegram\Api;
+namespace Leafgram\TelegramBotApi\Api;
 
 trait Payments
 {

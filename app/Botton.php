@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Telegram;
+namespace Leafgram\TelegramBotApi;
 
 class Botton
 {
