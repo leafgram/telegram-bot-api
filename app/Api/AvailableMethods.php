@@ -29,7 +29,7 @@ use CURLFile;
 
 trait AvailableMethods
 {
-    public function sendMessage($chat_id, $text, string $parse_mode = null, bool $disable_web_page_preview = null, $reply_to_message_id = null, $reply_markup = null)
+    public function sendMessage($chat_id, $text, string $parse_mode = null, bool $disable_web_page_preview = null, $reply_to_message_id = null, $reply_markup = null, $message_thread_id = null)
     {
         $message = [
             'chat_id' => $chat_id,
@@ -42,7 +42,7 @@ trait AvailableMethods
         return $this->bot('sendMessage', $message);
     }
 
-    public function forwardMessage($chat_id, $from_chat_id, $message_id)
+    public function forwardMessage($chat_id, $from_chat_id, $message_id, $message_thread_id = null)
     {
         $message = [
             'chat_id' => $chat_id,
@@ -52,7 +52,7 @@ trait AvailableMethods
         return $this->bot('forwardMessage', $message);
     }
 
-    public function copyMessage($chat_id, $from_chat_id, $message_id)
+    public function copyMessage($chat_id, $from_chat_id, $message_id, $message_thread_id = null)
     {
         $message = [
             'chat_id' => $chat_id,
@@ -62,7 +62,7 @@ trait AvailableMethods
         return $this->bot('copyMessage', $message);
     }
 
-    public function sendPhoto($chat_id, $photo, $caption = null, $parse_mode = null, $reply_markup = null, $reply_to_message_id = null)
+    public function sendPhoto($chat_id, $photo, $caption = null, $parse_mode = null, $reply_markup = null, $reply_to_message_id = null, $message_thread_id = null)
     {
         $message = [
             'chat_id' => $chat_id,
