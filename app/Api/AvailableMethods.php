@@ -33,6 +33,7 @@ trait AvailableMethods
     {
         $message = [
             'chat_id' => $chat_id,
+            'message_thread_id' => $message_thread_id,
             'text' => $text,
             'parse_mode' => is_null($parse_mode) ? env('PARSE_MODE') ?? 'html' : $parse_mode,
             'disable_web_page_preview' => is_null($disable_web_page_preview) ? env('DISABLE_WEB_PAGE_PREVIEW') ?? 'html' : $disable_web_page_preview,
@@ -46,6 +47,7 @@ trait AvailableMethods
     {
         $message = [
             'chat_id' => $chat_id,
+            'message_thread_id' => $message_thread_id,
             'from_chat_id' => $from_chat_id,
             'message_id' => $message_id
         ];
@@ -56,6 +58,7 @@ trait AvailableMethods
     {
         $message = [
             'chat_id' => $chat_id,
+            'message_thread_id' => $message_thread_id,
             'from_chat_id' => $from_chat_id,
             'message_id' => $message_id
         ];
@@ -66,6 +69,7 @@ trait AvailableMethods
     {
         $message = [
             'chat_id' => $chat_id,
+            'message_thread_id' => $message_thread_id,
             'photo' => $photo,
             'caption' => $caption,
             'parse_mode' => is_null($parse_mode) ? env('PARSE_MODE') ?? 'html' : $parse_mode,
