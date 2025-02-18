@@ -284,4 +284,13 @@ trait AvailableMethods
         ];
         return $this->bot('answerCallbackQuery', $message);
     }
+
+    public function getChatMember($chat_id, $user_id)
+    {
+        $message = [
+            'chat_id' => $chat_id,
+            'user_id' => $user_id
+        ];
+        return $this->bot('getChatMember', $message);
+    }
 }
