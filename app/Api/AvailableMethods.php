@@ -176,11 +176,11 @@ trait AvailableMethods
         return $this->bot('sendVideoNote', $message);
     }
 
-    public function sendMediaGroup($chat_id, $media, $reply_to_message_id = null)
+    public function sendMediaGroup($chat_id, array $media, $reply_to_message_id = null)
     {
         $message = [
             'chat_id' => $chat_id,
-            'media' => $media,
+            'media' => json_encode($media),
             'reply_to_message_id' => $reply_to_message_id,
         ];
         return $this->bot('sendMediaGroup', $message);
